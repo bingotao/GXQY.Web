@@ -1,0 +1,129 @@
+@import '~@/default.less';
+.Entering {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .project {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+    }
+    .kqtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .legend {
+            display: flex;
+            align-items: center;
+            >div {
+                margin-right: 10px;
+                width: 26px;
+                height: 26px;
+                border-radius: 3px;
+            }
+        }
+    }
+    .table {
+        flex: 1;
+        width: 100%;
+        overflow: auto;
+        .datasrow {
+            text-align: left;
+            >div {
+                width: 40px;
+                display: inline-block;
+                border-radius: 3px;
+                padding: 5px;
+                margin: 5px;
+                text-align: center;
+            }
+        }
+    }
+    .vslider {
+        border-right: 1px solid #ccc;
+        margin: 0 10px;
+        height: 30px;
+    }
+    .cellcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        >div {
+            padding: 5px 10px;
+            width: 40px;
+            border-radius: 3px;
+            margin: 5px;
+            cursor: pointer;
+            color: white; // border: 1px dotted; //   background-color: white;
+            //   background: currentColor;
+        }
+    }
+    :global {
+        .gz {
+            >div {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+            }
+        }
+        .gs {
+            font-weight: 700;
+        }
+        .qt,
+        .gzr,
+        .jjr,
+        .dq {
+            border: 1px solid;
+        }
+        @o: 0%;
+        .qt {
+            @color: #aaa;
+            background-color: lighten(@color, @o);
+            border-color: @color;
+        }
+        .gzr {
+            @color: rgb(83, 187, 83);
+            background-color: lighten(@color, @o);
+            border-color: @color;
+        }
+        .jjr {
+            @color: rgb(226, 84, 84);
+            background-color: lighten(@color, @o);
+            border-color: @color;
+        }
+        .dq {
+            @color: rgb(23, 133, 235);
+            background-color: lighten(@color, @o);
+            border-color: @color;
+        }
+        .projectinfo {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eee;
+            font-weight: 700;
+            >div {
+                width: 70px;
+                border: 1px solid #eee;
+                &:not(:last-child) {
+                    border-right: 0;
+                }
+                >div {
+                    padding: 5px;
+                    text-align: center;
+                }
+                >div:first-child {
+                    border-bottom: 1px solid #eee;
+                }
+            }
+        }
+    }
+}
+
+.exportBtns {
+    >button {
+        margin: 5px;
+    }
+}
